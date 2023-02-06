@@ -44,7 +44,7 @@ class Finish extends Component {
 
   //Suapaya User(Mobile), setelah bayar akan diarahkan ke history pembayaran
   toHistory = () => {
-    window.ReactNativeWebview.postMessage("Selesai");
+    window.ReactNativeWebView.postMessage("Selesai");
   };
 
   render() {
