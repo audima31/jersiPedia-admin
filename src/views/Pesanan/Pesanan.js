@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 import { getListPesanan } from "store/actions/PesananAction";
 import Swal from "sweetalert2";
-import { numberWithCommas } from "utils";
+// import { numberWithCommas } from "utils";
 import "../../assets/css/ListLiga.css";
 
 class Pesanan extends Component {
@@ -64,6 +64,10 @@ class Pesanan extends Component {
                               {Object.keys(
                                 getListPesananResult[key].pesanans
                               ).map((id) => {
+                                console.log(
+                                  "list : ",
+                                  getListPesananResult[key].pesanans[id].product
+                                );
                                 return (
                                   <Row key={key}>
                                     <Col md={2}>
@@ -84,10 +88,14 @@ class Pesanan extends Component {
                                       </p>
                                       <p>
                                         Rp.
-                                        {numberWithCommas(
+                                        {/* {numberWithCommas(
                                           getListPesananResult[key].pesanans[id]
                                             .product.harga
-                                        )}
+                                        )} */}
+                                        {
+                                          getListPesananResult[key].pesanans[id]
+                                            .product.harga
+                                        }
                                       </p>
                                     </Col>
 
@@ -101,10 +109,14 @@ class Pesanan extends Component {
                                       </p>
                                       <p>
                                         Total Harga : RP.
-                                        {numberWithCommas(
+                                        {/* {numberWithCommas(
                                           getListPesananResult[key].pesanans[id]
                                             .totalHarga
-                                        )}
+                                        )} */}
+                                        {
+                                          getListPesananResult[key].pesanans[id]
+                                            .totalHarga
+                                        }
                                       </p>
                                     </Col>
                                   </Row>
@@ -114,11 +126,11 @@ class Pesanan extends Component {
                             <td>{getListPesananResult[key].status}</td>
                             <td align="right">
                               <p>
-                                {" "}
                                 Total Harga : Rp.{" "}
-                                {numberWithCommas(
+                                {/* {numberWithCommas(
                                   getListPesananResult[key].totalHarga
-                                )}
+                                )} */}
+                                {getListPesananResult[key].totalHarga}
                               </p>
 
                               {/* <p>
