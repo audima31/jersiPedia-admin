@@ -11,6 +11,7 @@
     "jquery": "3.6.0",
     "perfect-scrollbar": "1.5.5",
     "react": ">=16.8.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": ">=16.8.0",
     "react-notification-alert": "0.0.13",
     "react-redux": "^8.0.5",
